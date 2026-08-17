@@ -1,0 +1,6 @@
+langgraph>=0.2
+anthropic>=0.40
+sentence-transformers>=3.0
+faiss-cpu>=1.8
+streamlit>=1.38
+python-dotenv>=1.0

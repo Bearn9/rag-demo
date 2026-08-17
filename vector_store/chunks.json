@@ -1,0 +1,404 @@
+[
+  {
+    "text": "# Remote and Hybrid Work Policy\n\nThis document describes Bearn Analytics' expectations for where and when employees work.",
+    "source": "company_handbook_remote_work.md",
+    "section": "Remote and Hybrid Work Policy",
+    "chunk_id": "company_handbook_remote_work.md::Remote and Hybrid Work Policy::0"
+  },
+  {
+    "text": "Employees based within **50 miles** of a Bearn office are expected to work in-office on **Tuesdays and Thursdays**, with the remaining days flexible between home and office. Employees living beyond that radius are considered fully remote and are not required to come into an office.",
+    "source": "company_handbook_remote_work.md",
+    "section": "Hybrid schedule",
+    "chunk_id": "company_handbook_remote_work.md::Hybrid schedule::0"
+  },
+  {
+    "text": "Regardless of work location, all employees are expected to be available for meetings and collaboration during **core hours of 10:00 AM–3:00 PM Eastern Time**. Outside of core hours, employees may structure their day flexibly as long as deliverables and team commitments are met.",
+    "source": "company_handbook_remote_work.md",
+    "section": "Core hours",
+    "chunk_id": "company_handbook_remote_work.md::Core hours::0"
+  },
+  {
+    "text": "Fully remote employees, and hybrid employees on their remote days, are eligible for a **$500/year home-office stipend**, reimbursable for desks, chairs, monitors, and other ergonomic equipment. Stipend requests go through the standard expense reimbursement system.",
+    "source": "company_handbook_remote_work.md",
+    "section": "Home office stipend",
+    "chunk_id": "company_handbook_remote_work.md::Home office stipend::0"
+  },
+  {
+    "text": "Employees may work from another country for up to **30 consecutive days per year** without special approval, provided they remain in a similar time zone (within 3 hours of their home office) during core hours. Longer stays require HR and Legal sign-off due to tax and employment-law implications.",
+    "source": "company_handbook_remote_work.md",
+    "section": "Working from abroad",
+    "chunk_id": "company_handbook_remote_work.md::Working from abroad::0"
+  },
+  {
+    "text": "All office locations use badge access via the employee's Okta-linked ID badge, available 24/7 for employees who need after-hours access.",
+    "source": "company_handbook_remote_work.md",
+    "section": "Office access",
+    "chunk_id": "company_handbook_remote_work.md::Office access::0"
+  },
+  {
+    "text": "# Annual Report Summary: FY2024\n\nA high-level summary of Bearn Analytics' financial year 2024 (Jan 1 – Dec 31, 2024) performance, for internal reference. Full quarterly figures are tracked in `economy_quarterly_financials.csv`.",
+    "source": "economy_annual_report_summary.md",
+    "section": "Annual Report Summary: FY2024",
+    "chunk_id": "economy_annual_report_summary.md::Annual Report Summary: FY2024::0"
+  },
+  {
+    "text": "Bearn Analytics' fiscal year runs **January 1 through December 31**, matching the calendar year. Financial results are reviewed by the board quarterly and summarized in an internal all-hands deck published the second week after quarter close.",
+    "source": "economy_annual_report_summary.md",
+    "section": "Fiscal year and reporting",
+    "chunk_id": "economy_annual_report_summary.md::Fiscal year and reporting::0"
+  },
+  {
+    "text": "Full-year revenue for FY2024 reached **$5.86 million**, up **34% year-over-year** from FY2023's $4.41 million. Full-year net profit was **$1.23 million**, giving a blended profit margin of roughly 21%. Annual recurring revenue (ARR) exited the year at **$6.15 million**, driven primarily by Team and Enterprise tier upgrades.",
+    "source": "economy_annual_report_summary.md",
+    "section": "FY2024 highlights",
+    "chunk_id": "economy_annual_report_summary.md::FY2024 highlights::0"
+  },
+  {
+    "text": "Bearn Analytics raised a **$2.5 million seed round** in early 2021, led by **Cascade Ventures**, with participation from **Birchline Capital**. The company has been cash-flow positive since Q3 2023 and has not raised additional external funding since the seed round — growth since then has been funded from operating cash flow.",
+    "source": "economy_annual_report_summary.md",
+    "section": "Funding history",
+    "chunk_id": "economy_annual_report_summary.md::Funding history::0"
+  },
+  {
+    "text": "As of Q4 2024, cash reserves stood at **$4.6 million**, giving the company a runway well in excess of 24 months at current burn (the company was net cash-flow positive for all of FY2024, so \"runway\" is a formality rather than a constraint).",
+    "source": "economy_annual_report_summary.md",
+    "section": "Cash position and runway",
+    "chunk_id": "economy_annual_report_summary.md::Cash position and runway::0"
+  },
+  {
+    "text": "Departmental budgets are proposed by department heads in November and approved by the CFO and CEO in December for the following fiscal year. Any single unbudgeted expense over **$10,000** requires CFO sign-off regardless of which department's budget it falls under.",
+    "source": "economy_annual_report_summary.md",
+    "section": "Budget approval process",
+    "chunk_id": "economy_annual_report_summary.md::Budget approval process::0"
+  },
+  {
+    "text": "# Expense and Travel Policy\n\nGuidelines for submitting business expenses and booking travel at Bearn Analytics.",
+    "source": "finance_expense_policy.md",
+    "section": "Expense and Travel Policy",
+    "chunk_id": "finance_expense_policy.md::Expense and Travel Policy::0"
+  },
+  {
+    "text": "All business expenses must be submitted through **Ramp** within **30 days** of the purchase date, with an itemized receipt attached. Expenses submitted after 30 days require manager approval to be reimbursed.",
+    "source": "finance_expense_policy.md",
+    "section": "Submitting expenses",
+    "chunk_id": "finance_expense_policy.md::Submitting expenses::0"
+  },
+  {
+    "text": "- Expenses **under $200**: auto-approved against your manager's monthly expense budget.\n- Expenses **$200–$2,000**: require direct manager approval.\n- Expenses **over $2,000**: require both manager and department head approval.",
+    "source": "finance_expense_policy.md",
+    "section": "Approval thresholds",
+    "chunk_id": "finance_expense_policy.md::Approval thresholds::0"
+  },
+  {
+    "text": "Flights and hotels should be booked through **Navan**, the company's designated travel platform. Domestic flights should be booked in economy class; flights over 6 hours may be booked in premium economy. Hotel spend is capped at **$250/night** in standard cost-of-living cities and **$400/night** in high-cost cities (New York, San Francisco, London, Tokyo).",
+    "source": "finance_expense_policy.md",
+    "section": "Travel booking",
+    "chunk_id": "finance_expense_policy.md::Travel booking::0"
+  },
+  {
+    "text": "When traveling for business, meals are reimbursed at actual cost up to a **$75/day** cap, or employees may opt for a flat **$60/day per diem** with no receipts required.",
+    "source": "finance_expense_policy.md",
+    "section": "Meals and per diem",
+    "chunk_id": "finance_expense_policy.md::Meals and per diem::0"
+  },
+  {
+    "text": "Client meals and entertainment are reimbursable at up to **$150 per person** with a brief note on attendees and business purpose. Alcohol is reimbursable as part of a client meal but not as a standalone expense.",
+    "source": "finance_expense_policy.md",
+    "section": "Client entertainment",
+    "chunk_id": "finance_expense_policy.md::Client entertainment::0"
+  },
+  {
+    "text": "Bearn Analytics does not reimburse: personal entertainment, traffic or parking fines, airline lounge memberships, or upgrades to first class on flights under 6 hours.",
+    "source": "finance_expense_policy.md",
+    "section": "Non-reimbursable expenses",
+    "chunk_id": "finance_expense_policy.md::Non-reimbursable expenses::0"
+  },
+  {
+    "text": "# Health Benefits, 401(k), and Parental Leave\n\nThis document summarizes the core benefits available to full-time Bearn Analytics employees.",
+    "source": "hr_policies_benefits.md",
+    "section": "Health Benefits, 401(k), and Parental Leave",
+    "chunk_id": "hr_policies_benefits.md::Health Benefits, 401(k), and Parental Leave::0"
+  },
+  {
+    "text": "Bearn offers three medical plan tiers through our benefits provider, selectable during open enrollment or within 30 days of a qualifying life event:\n\n- **Bronze:** Lowest premium, higher deductible. Company covers 70% of premium.\n- **Silver:** Balanced premium/deductible. Company covers 80% of premium.\n- **Gold:** Highest premium, lowest deductible. Company covers 90% of premium.\n\nDental and vision coverage are bundled at no additional cost on all three tiers.",
+    "source": "hr_policies_benefits.md",
+    "section": "Health insurance plan tiers",
+    "chunk_id": "hr_policies_benefits.md::Health insurance plan tiers::0"
+  },
+  {
+    "text": "Employees are eligible to enroll in the 401(k) plan on their first day of employment. Bearn matches **100% of employee contributions up to 4% of base salary**, with immediate vesting on the match. Contributions can be traditional (pre-tax) or Roth, or a combination of both.",
+    "source": "hr_policies_benefits.md",
+    "section": "401(k) retirement plan",
+    "chunk_id": "hr_policies_benefits.md::401(k) retirement plan::0"
+  },
+  {
+    "text": "Bearn Analytics provides **16 weeks of fully paid parental leave** for all new parents (birth, adoption, or foster placement), regardless of gender or which parent is the primary caregiver. Leave can be taken continuously or split into two blocks within the first 12 months after the qualifying event, subject to manager approval for the split arrangement.",
+    "source": "hr_policies_benefits.md",
+    "section": "Parental leave",
+    "chunk_id": "hr_policies_benefits.md::Parental leave::0"
+  },
+  {
+    "text": "- Annual wellness stipend of $300, reimbursable for gym memberships, fitness classes, or mental health apps.\n- Employee Assistance Program (EAP) offering free confidential counseling sessions.\n- Life and short/long-term disability insurance provided at no cost to the employee.",
+    "source": "hr_policies_benefits.md",
+    "section": "Other benefits",
+    "chunk_id": "hr_policies_benefits.md::Other benefits::0"
+  },
+  {
+    "text": "# Paid Time Off (PTO) Policy\n\nThis document describes how paid time off accrues and how to request it at Bearn Analytics.",
+    "source": "hr_policies_pto.md",
+    "section": "Paid Time Off (PTO) Policy",
+    "chunk_id": "hr_policies_pto.md::Paid Time Off (PTO) Policy::0"
+  },
+  {
+    "text": "Full-time employees accrue PTO on a tiered schedule based on tenure:\n\n- **Year 1–3:** 15 days per year, accrued monthly (1.25 days/month).\n- **After 3 years:** 20 days per year, accrued monthly (1.67 days/month).\n- **After 7 years:** 25 days per year, accrued monthly.\n\nPart-time employees accrue PTO on a pro-rated basis according to scheduled hours.",
+    "source": "hr_policies_pto.md",
+    "section": "Accrual schedule",
+    "chunk_id": "hr_policies_pto.md::Accrual schedule::0"
+  },
+  {
+    "text": "All PTO requests must be submitted through **Workday** at least **5 business days** in advance of the first day off, except in the case of documented emergencies. Requests are approved by your direct manager and are subject to team coverage needs during that period.\n\nRequests longer than 10 consecutive business days require additional sign-off from your department head.",
+    "source": "hr_policies_pto.md",
+    "section": "Requesting time off",
+    "chunk_id": "hr_policies_pto.md::Requesting time off::0"
+  },
+  {
+    "text": "Up to **5 unused PTO days** may be rolled over into the following calendar year. Any unused balance beyond that is forfeited on December 31st, except where state law requires payout.\n\nUpon separation from the company, unused accrued PTO is paid out at the employee's current base rate, in accordance with local law.",
+    "source": "hr_policies_pto.md",
+    "section": "Rollover and payout",
+    "chunk_id": "hr_policies_pto.md::Rollover and payout::0"
+  },
+  {
+    "text": "In addition to PTO, Bearn Analytics observes 10 paid company holidays per year, published annually on the internal HR calendar.",
+    "source": "hr_policies_pto.md",
+    "section": "Holidays",
+    "chunk_id": "hr_policies_pto.md::Holidays::0"
+  },
+  {
+    "text": "# New-Hire Laptop Provisioning\n\nThis guide covers how new employees receive and set up their work laptop.",
+    "source": "it_setup_laptop.md",
+    "section": "New-Hire Laptop Provisioning",
+    "chunk_id": "it_setup_laptop.md::New-Hire Laptop Provisioning::0"
+  },
+  {
+    "text": "All new hires are issued a **MacBook Pro 14\" (M-series)** as their default machine. Employees on the Engineering team working on Windows-specific tooling may request a Windows laptop instead via a ticket to the IT Helpdesk; approval is not automatic and requires manager sign-off.\n\nLaptops are refreshed on a **3-year cycle**, or sooner if hardware fails or no longer meets role requirements.",
+    "source": "it_setup_laptop.md",
+    "section": "Default hardware",
+    "chunk_id": "it_setup_laptop.md::Default hardware::0"
+  },
+  {
+    "text": "1. Sign in to the laptop using your **Okta SSO** credentials, provided in your welcome email.\n2. Open a terminal and run the onboarding script: `bearn-setup.sh`. This installs standard tooling (Git, the company VPN client, Slack, 1Password, and department-specific software based on your role).\n3. Enroll the device in the company's Mobile Device Management (MDM) system when prompted — this is mandatory for all company-owned hardware.\n4. Verify Okta Verify (the MFA app) is installed and paired before attempting to access internal systems.",
+    "source": "it_setup_laptop.md",
+    "section": "First-day setup",
+    "chunk_id": "it_setup_laptop.md::First-day setup::0"
+  },
+  {
+    "text": "For setup issues, contact the IT Helpdesk via the `#it-helpdesk` Slack channel or the internal ticketing portal. Standard response time is within 4 business hours.",
+    "source": "it_setup_laptop.md",
+    "section": "Support",
+    "chunk_id": "it_setup_laptop.md::Support::0"
+  },
+  {
+    "text": "Loaner laptops are available from the IT desk for employees whose primary device is being repaired. International travel adapters and a second monitor for home offices can be requested through the same ticketing portal.",
+    "source": "it_setup_laptop.md",
+    "section": "Loaner and travel equipment",
+    "chunk_id": "it_setup_laptop.md::Loaner and travel equipment::0"
+  },
+  {
+    "text": "# VPN and Internal Network Access\n\nThis document explains how employees connect to Bearn Analytics' internal network and tools.",
+    "source": "it_setup_vpn_access.md",
+    "section": "VPN and Internal Network Access",
+    "chunk_id": "it_setup_vpn_access.md::VPN and Internal Network Access::0"
+  },
+  {
+    "text": "Bearn Analytics uses **Tailscale** as its VPN solution for internal network access. Unlike traditional VPN clients, Tailscale creates a private mesh network between enrolled devices rather than routing traffic through a central gateway, which keeps connections fast even for remote and international employees.",
+    "source": "it_setup_vpn_access.md",
+    "section": "VPN client",
+    "chunk_id": "it_setup_vpn_access.md::VPN client::0"
+  },
+  {
+    "text": "fast even for remote and international employees.\n\nThe Tailscale client is installed automatically by the `bearn-setup.sh` onboarding script on new laptops. Employees can verify their connection status via the Tailscale menu-bar icon, which should show \"Connected\" with a green indicator.",
+    "source": "it_setup_vpn_access.md",
+    "section": "VPN client",
+    "chunk_id": "it_setup_vpn_access.md::VPN client::1"
+  },
+  {
+    "text": "Access to the Tailscale network requires:\n\n- An active Okta account.\n- **Multi-factor authentication (MFA)** via Okta Verify, enforced on every new device connection.\n- Device enrollment in the company MDM system (see the laptop provisioning guide).",
+    "source": "it_setup_vpn_access.md",
+    "section": "Access requirements",
+    "chunk_id": "it_setup_vpn_access.md::Access requirements::0"
+  },
+  {
+    "text": "The following internal tools are only reachable while connected to Tailscale:\n\n- Confluence (internal wiki)\n- Jira (issue tracking)\n- Internal staging and QA environments\n- Internal admin dashboards for the Bearn platform\n\nProduction customer-facing services do **not** require VPN access to reach, since they are public-facing by design.",
+    "source": "it_setup_vpn_access.md",
+    "section": "What requires the VPN",
+    "chunk_id": "it_setup_vpn_access.md::What requires the VPN::0"
+  },
+  {
+    "text": "If Tailscale shows \"Disconnected\" for more than a few minutes, try signing out and back in via Okta SSO first. Persistent issues should be reported to `#it-helpdesk` on Slack.",
+    "source": "it_setup_vpn_access.md",
+    "section": "Troubleshooting",
+    "chunk_id": "it_setup_vpn_access.md::Troubleshooting::0"
+  },
+  {
+    "text": "# Product FAQ: Pricing and Billing\n\nAnswers to common questions about Bearn Analytics platform pricing and billing.",
+    "source": "product_faq_billing.md",
+    "section": "Product FAQ: Pricing and Billing",
+    "chunk_id": "product_faq_billing.md::Product FAQ: Pricing and Billing::0"
+  },
+  {
+    "text": "Bearn Analytics is offered in three tiers, billed monthly or annually:\n\n- **Starter:** $49/month. For individuals and small teams getting started with analytics dashboards.\n- **Team:** $99/month. Adds collaboration features, shared dashboards, and additional data connectors.\n- **Enterprise:** Custom pricing. Includes SSO/SAML, dedicated support, and advanced governance controls. Contact sales for a quote.",
+    "source": "product_faq_billing.md",
+    "section": "Plan pricing",
+    "chunk_id": "product_faq_billing.md::Plan pricing::0"
+  },
+  {
+    "text": "Customers who choose annual billing receive a **20% discount** compared to paying month-to-month on the same tier.",
+    "source": "product_faq_billing.md",
+    "section": "Annual discount",
+    "chunk_id": "product_faq_billing.md::Annual discount::0"
+  },
+  {
+    "text": "New subscribers are covered by a **14-day refund policy**: if you cancel within 14 days of your first payment, you receive a full refund, no questions asked. After the 14-day window, cancellations take effect at the end of the current billing period, with no partial refunds for unused time.",
+    "source": "product_faq_billing.md",
+    "section": "Refunds and cancellations",
+    "chunk_id": "product_faq_billing.md::Refunds and cancellations::0"
+  },
+  {
+    "text": "We accept all major credit cards and, for Enterprise customers, invoicing with net-30 payment terms. Failed payments trigger three retry attempts over 7 days before an account is downgraded to a read-only state.",
+    "source": "product_faq_billing.md",
+    "section": "Payment methods",
+    "chunk_id": "product_faq_billing.md::Payment methods::0"
+  },
+  {
+    "text": "Plan changes take effect immediately for upgrades (prorated charge for the remainder of the billing cycle) and at the next billing cycle for downgrades.",
+    "source": "product_faq_billing.md",
+    "section": "Upgrading and downgrading",
+    "chunk_id": "product_faq_billing.md::Upgrading and downgrading::0"
+  },
+  {
+    "text": "# Product FAQ: Features and Data Connectors\n\nAnswers to common questions about what the Bearn Analytics platform can do.",
+    "source": "product_faq_features.md",
+    "section": "Product FAQ: Features and Data Connectors",
+    "chunk_id": "product_faq_features.md::Product FAQ: Features and Data Connectors::0"
+  },
+  {
+    "text": "Bearn Analytics natively connects to the following data sources: PostgreSQL, Snowflake, BigQuery, MySQL, and Amazon Redshift. Custom connectors for other sources can be built using the platform's REST API.",
+    "source": "product_faq_features.md",
+    "section": "Data connectors",
+    "chunk_id": "product_faq_features.md::Data connectors::0"
+  },
+  {
+    "text": "How often your connected data refreshes depends on your plan tier:\n\n- **Starter and Team plans:** data refreshes every **15 minutes**.\n- **Enterprise plan:** **real-time** streaming refresh via change-data-capture, where supported by the source database.\n\nManual \"refresh now\" is available on all plans for on-demand updates outside the scheduled interval.",
+    "source": "product_faq_features.md",
+    "section": "Data refresh rates",
+    "chunk_id": "product_faq_features.md::Data refresh rates::0"
+  },
+  {
+    "text": "The Bearn API enforces the following rate limits per API key:\n\n- **Standard tier (Starter/Team):** 100 requests per minute.\n- **Enterprise tier:** 1,000 requests per minute, with the option to request a further increase from your account manager.\n\nRequests beyond the limit receive an HTTP 429 response with a `Retry-After` header.",
+    "source": "product_faq_features.md",
+    "section": "API rate limits",
+    "chunk_id": "product_faq_features.md::API rate limits::0"
+  },
+  {
+    "text": "Dashboards support drag-and-drop chart building, scheduled email/Slack digests, and public share links (Team plan and above). Row-level security for shared dashboards is available on the Enterprise plan.",
+    "source": "product_faq_features.md",
+    "section": "Dashboards and sharing",
+    "chunk_id": "product_faq_features.md::Dashboards and sharing::0"
+  },
+  {
+    "text": "# Password and Account Security Policy\n\nThis document defines password and authentication requirements for all Bearn Analytics systems.",
+    "source": "security_policy_password.md",
+    "section": "Password and Account Security Policy",
+    "chunk_id": "security_policy_password.md::Password and Account Security Policy::0"
+  },
+  {
+    "text": "All company account passwords must meet the following minimum requirements:\n\n- At least **14 characters** long.\n- A mix of uppercase, lowercase, numbers, and symbols.\n- Must not match any of the employee's **last 10 passwords** (enforced automatically by Okta).\n- Must be changed at least every **180 days**.\n\nPasswords must never be shared, written down in plaintext, or reused across personal and work accounts.",
+    "source": "security_policy_password.md",
+    "section": "Password requirements",
+    "chunk_id": "security_policy_password.md::Password requirements::0"
+  },
+  {
+    "text": "**Okta Verify MFA is mandatory** for all employees on all company systems, with no exceptions. Push notification is the default MFA method; SMS-based MFA is disabled company-wide due to SIM-swapping risk. Hardware security keys (YubiKey) are available on request for employees handling sensitive customer data.",
+    "source": "security_policy_password.md",
+    "section": "Multi-factor authentication",
+    "chunk_id": "security_policy_password.md::Multi-factor authentication::0"
+  },
+  {
+    "text": "All employees are provisioned a **1Password** account during onboarding and are required to use it for storing credentials to any work-related system. Password manager vaults are subject to the same 14-character minimum for the master password.",
+    "source": "security_policy_password.md",
+    "section": "Password manager",
+    "chunk_id": "security_policy_password.md::Password manager::0"
+  },
+  {
+    "text": "After **5 consecutive failed login attempts**, an account is locked for 15 minutes. Repeated lockouts trigger an automatic security review and a notification to the IT security team.",
+    "source": "security_policy_password.md",
+    "section": "Account lockout",
+    "chunk_id": "security_policy_password.md::Account lockout::0"
+  },
+  {
+    "text": "Suspected account compromise must be reported immediately to `security@bearnanalytics.example` and the `#security-incidents` Slack channel. Do not wait for confirmation before reporting.",
+    "source": "security_policy_password.md",
+    "section": "Reporting a compromised account",
+    "chunk_id": "security_policy_password.md::Reporting a compromised account::0"
+  },
+  {
+    "text": "economy quarterly financials — Q1 2023. Quarter: Q1 2023, Revenue (USD): 980000, Operating Expenses (USD): 890000, Net Profit (USD): 90000, Profit Margin (%): 9.2, ARR (USD): 3800000, Headcount: 34, Customer Count: 145, Churn Rate (%): 3.4, Cash Reserves (USD): 1200000.",
+    "source": "economy_quarterly_financials.csv",
+    "section": "Q1 2023",
+    "chunk_id": "economy_quarterly_financials.csv::Q1 2023"
+  },
+  {
+    "text": "economy quarterly financials — Q2 2023. Quarter: Q2 2023, Revenue (USD): 1050000, Operating Expenses (USD): 910000, Net Profit (USD): 140000, Profit Margin (%): 13.3, ARR (USD): 4050000, Headcount: 36, Customer Count: 158, Churn Rate (%): 3.1, Cash Reserves (USD): 1450000.",
+    "source": "economy_quarterly_financials.csv",
+    "section": "Q2 2023",
+    "chunk_id": "economy_quarterly_financials.csv::Q2 2023"
+  },
+  {
+    "text": "economy quarterly financials — Q3 2023. Quarter: Q3 2023, Revenue (USD): 1120000, Operating Expenses (USD): 940000, Net Profit (USD): 180000, Profit Margin (%): 16.1, ARR (USD): 4300000, Headcount: 38, Customer Count: 171, Churn Rate (%): 2.9, Cash Reserves (USD): 1680000.",
+    "source": "economy_quarterly_financials.csv",
+    "section": "Q3 2023",
+    "chunk_id": "economy_quarterly_financials.csv::Q3 2023"
+  },
+  {
+    "text": "economy quarterly financials — Q4 2023. Quarter: Q4 2023, Revenue (USD): 1260000, Operating Expenses (USD): 990000, Net Profit (USD): 270000, Profit Margin (%): 21.4, ARR (USD): 4650000, Headcount: 41, Customer Count: 189, Churn Rate (%): 2.6, Cash Reserves (USD): 2050000.",
+    "source": "economy_quarterly_financials.csv",
+    "section": "Q4 2023",
+    "chunk_id": "economy_quarterly_financials.csv::Q4 2023"
+  },
+  {
+    "text": "economy quarterly financials — Q1 2024. Quarter: Q1 2024, Revenue (USD): 1240000, Operating Expenses (USD): 980000, Net Profit (USD): 260000, Profit Margin (%): 21.0, ARR (USD): 4900000, Headcount: 42, Customer Count: 210, Churn Rate (%): 2.1, Cash Reserves (USD): 3100000.",
+    "source": "economy_quarterly_financials.csv",
+    "section": "Q1 2024",
+    "chunk_id": "economy_quarterly_financials.csv::Q1 2024"
+  },
+  {
+    "text": "economy quarterly financials — Q2 2024. Quarter: Q2 2024, Revenue (USD): 1390000, Operating Expenses (USD): 1040000, Net Profit (USD): 350000, Profit Margin (%): 25.2, ARR (USD): 5250000, Headcount: 45, Customer Count: 228, Churn Rate (%): 2.0, Cash Reserves (USD): 3520000.",
+    "source": "economy_quarterly_financials.csv",
+    "section": "Q2 2024",
+    "chunk_id": "economy_quarterly_financials.csv::Q2 2024"
+  },
+  {
+    "text": "economy quarterly financials — Q3 2024. Quarter: Q3 2024, Revenue (USD): 1510000, Operating Expenses (USD): 1105000, Net Profit (USD): 405000, Profit Margin (%): 26.8, ARR (USD): 5680000, Headcount: 49, Customer Count: 247, Churn Rate (%): 1.8, Cash Reserves (USD): 3980000.",
+    "source": "economy_quarterly_financials.csv",
+    "section": "Q3 2024",
+    "chunk_id": "economy_quarterly_financials.csv::Q3 2024"
+  },
+  {
+    "text": "economy quarterly financials — Q4 2024. Quarter: Q4 2024, Revenue (USD): 1670000, Operating Expenses (USD): 1180000, Net Profit (USD): 490000, Profit Margin (%): 29.3, ARR (USD): 6150000, Headcount: 53, Customer Count: 269, Churn Rate (%): 1.7, Cash Reserves (USD): 4600000.",
+    "source": "economy_quarterly_financials.csv",
+    "section": "Q4 2024",
+    "chunk_id": "economy_quarterly_financials.csv::Q4 2024"
+  },
+  {
+    "text": "economy quarterly financials — Q1 2025. Quarter: Q1 2025, Revenue (USD): 1720000, Operating Expenses (USD): 1230000, Net Profit (USD): 490000, Profit Margin (%): 28.5, ARR (USD): 6600000, Headcount: 55, Customer Count: 284, Churn Rate (%): 1.9, Cash Reserves (USD): 5050000.",
+    "source": "economy_quarterly_financials.csv",
+    "section": "Q1 2025",
+    "chunk_id": "economy_quarterly_financials.csv::Q1 2025"
+  },
+  {
+    "text": "economy quarterly financials — Q2 2025. Quarter: Q2 2025, Revenue (USD): 1865000, Operating Expenses (USD): 1305000, Net Profit (USD): 560000, Profit Margin (%): 30.0, ARR (USD): 7100000, Headcount: 58, Customer Count: 301, Churn Rate (%): 1.6, Cash Reserves (USD): 5680000.",
+    "source": "economy_quarterly_financials.csv",
+    "section": "Q2 2025",
+    "chunk_id": "economy_quarterly_financials.csv::Q2 2025"
+  }
+]
