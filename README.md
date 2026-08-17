@@ -17,9 +17,9 @@ The interesting part isn't the retrieval — it's the routing. Every incoming qu
 </td>
 <td width="50%" valign="top">
 
-**Policy question — routed to retrieval, sources cited**
+**Financial question — routed to retrieval, sources cited**
 
-<img src="docs/screenshots/retrieval-answer.jpg" alt="Nova answering a remote-work policy question, with the Sources used panel expanded showing company_handbook_remote_work.md and hr_policies_pto.md chunks with similarity scores" width="100%">
+<img src="docs/screenshots/retrieval-answer.jpg" alt="Nova comparing Q2 2025 vs Q1 2025 net profit and margin, citing economy_quarterly_financials.csv for each figure, with the Sources used panel available below" width="100%">
 
 </td>
 </tr>

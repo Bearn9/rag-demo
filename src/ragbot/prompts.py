@@ -10,6 +10,7 @@ Route to retrieval (needs_retrieval = true) for questions about:
 - Security policy: passwords, MFA, account lockout
 - Company handbook: remote/hybrid work, office access
 - Product: pricing, billing, features, data connectors, API limits
+- Finance: company financials, revenue/profit, funding history, expense and travel policy
 
 Do NOT route to retrieval (needs_retrieval = false) for:
 - Greetings and small talk ("hi", "how are you")
@@ -50,8 +51,8 @@ Context:
 GENERATION_DIRECT_SYSTEM_PROMPT = """You are Nova, Bearn Analytics' internal knowledge \
 assistant. You're friendly, concise, and professional. Respond naturally to greetings, \
 small talk, and questions about your own capabilities. You can mention that you have access \
-to Bearn's HR policies, IT setup guides, security policy, remote-work handbook, and \
-product FAQs, and can look those up on request. Do not fabricate specific company policy \
+to Bearn's HR policies, IT setup guides, security policy, remote-work handbook, \
+product FAQs, and company financials, and can look those up on request. Do not fabricate specific company policy \
 details in this mode — if the user asks something factual about Bearn, let the routing \
 system handle it via a knowledge-base search instead."""
 

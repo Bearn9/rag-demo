@@ -28,6 +28,13 @@ with st.sidebar:
 
 st.title("\N{SPEECH BALLOON} Nova — Bearn Assistant")
 
+
+def _escape_dollar_math(text: str) -> str:
+    """Escape '$' so Streamlit's markdown renderer doesn't mistake dollar amounts
+    (e.g. "$490,000 ... $1,720,000") for paired LaTeX math delimiters."""
+    return text.replace("$", "\\$")
+
+
 def _render_meta(meta: dict) -> None:
     if meta["route"] == "retrieve":
         st.caption(f"\N{LEFT-POINTING MAGNIFYING GLASS} Retrieved from knowledge base — {meta['route_reasoning']}")
@@ -47,7 +54,7 @@ if "messages" not in st.session_state:
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
-        st.markdown(message["content"])
+        st.markdown(_escape_dollar_math(message["content"]))
         if message["role"] == "assistant" and show_routing and message.get("meta"):
             _render_meta(message["meta"])
 
@@ -59,7 +66,7 @@ query = st.chat_input(
 if query:
     st.session_state.messages.append({"role": "user", "content": query})
     with st.chat_message("user"):
-        st.markdown(query)
+        st.markdown(_escape_dollar_math(query))
 
     with st.chat_message("assistant"):
         status_box = st.status("Deciding whether to search the knowledge base...", expanded=False)
@@ -86,7 +93,7 @@ if query:
             "chunks": final_state.get("retrieved_chunks") or [],
         }
 
-        st.markdown(answer)
+        st.markdown(_escape_dollar_math(answer))
         if show_routing:
             _render_meta(meta)
 
