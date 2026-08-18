@@ -1,6 +1,6 @@
 # Nova - Bearn Assistant
 
-An agentic RAG chatbot demo built with **LangGraph** and the **Claude API**, backed by a local **FAISS** vector store over a fictional company's internal knowledge base.
+An agentic RAG chatbot demo built with **LangGraph** and the **Claude API**, backed by a local **FAISS** vector store over a fictional company (Bearn Analytics) internal database.
 
 Every incoming query first passes through a light classification step that decides whether it actually needs document lookup at all. Chit-chat ("What can you do?") gets answered directly while policy/product questions trigger a tool knowledge-base search. The Streamlit UI displays the decision live, so you can watch the agent choose its own path per query.
 
