@@ -1,6 +1,10 @@
+# CPU-only PyTorch wheels (pulled in by sentence-transformers): a much smaller install,
+# which keeps Streamlit Community Cloud builds and cold starts fast.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 langgraph>=0.2
-anthropic>=0.40
+anthropic>=0.122
 sentence-transformers>=3.0
 faiss-cpu>=1.8
-streamlit>=1.38
+streamlit>=1.50
 python-dotenv>=1.0

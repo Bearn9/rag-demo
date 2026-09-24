@@ -1,16 +1,16 @@
 [project]
 name = "ragbot"
 version = "0.1.0"
-description = "Agentic RAG chatbot demo: LangGraph + Claude + FAISS over a fictional company knowledge base."
+description = "Bearn Agent Demo: a Claude tool-use agent (LangGraph + FAISS) over a fictional company knowledge base, with an offline eval suite."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 dependencies = [
     "langgraph>=0.2",
-    "anthropic>=0.40",
+    "anthropic>=0.122",
     "sentence-transformers>=3.0",
     "faiss-cpu>=1.8",
-    "streamlit>=1.38",
+    "streamlit>=1.50",
     "python-dotenv>=1.0",
 ]
 
@@ -23,3 +23,6 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

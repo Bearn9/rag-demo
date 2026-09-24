@@ -23,6 +23,9 @@ jobs:
         env:
           PYTHONPATH: src
 
+      - name: Retrieval quality gate (no API key needed)
+        run: python scripts/run_eval.py --retrieval-only --min-hit-at-4 0.9
+
       - name: Run tests
         run: pytest -v
         env:

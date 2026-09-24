@@ -1,34 +1,36 @@
-"""End-to-end graph tests: routing + retrieval + generation, using the same
-EVAL_CASES table as scripts/run_eval.py. These hit the Anthropic API and are
-skipped automatically when ANTHROPIC_API_KEY isn't set (e.g. forked CI runs).
+"""End-to-end agent tests: the full tool-use loop against the Anthropic API, on a
+sample of cases from evals/dataset.jsonl. Skipped automatically when ANTHROPIC_API_KEY
+isn't set (e.g. forked CI runs). The full dataset runs via scripts/run_eval.py.
 """
-
-import sys
-from pathlib import Path
 
 import pytest
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from ragbot import config, evaluation
+from ragbot.graph import run, turn_totals
 
-from ragbot import config
-from ragbot.graph import get_graph
-from run_eval import EVAL_CASES
+pytestmark = pytest.mark.skipif(not config.ANTHROPIC_API_KEY, reason="ANTHROPIC_API_KEY not set")
 
-pytestmark = pytest.mark.skipif(
-    not config.ANTHROPIC_API_KEY, reason="ANTHROPIC_API_KEY not set"
-)
+SAMPLE_IDS = [
+    "chat-hi",
+    "harness-vector-db",
+    "calc-hotel-high-cost",
+    "fact-vpn",
+    "fin-profit-growth",
+    "turns-revenue-followup",
+    "oos-ceo-salary",
+]
+CASES = {c["id"]: c for c in evaluation.load_dataset() if c["id"] in SAMPLE_IDS}
 
 
-@pytest.mark.parametrize("query,expected_route,expected_source,expected_substring", EVAL_CASES)
-def test_eval_case(query, expected_route, expected_source, expected_substring):
-    graph = get_graph()
-    final_state = graph.invoke({"query": query})
+@pytest.mark.parametrize("case_id", SAMPLE_IDS)
+def test_agent_case(case_id):
+    case = CASES[case_id]
+    history = []
+    for turn in case["turns"]:
+        state = run(turn, history=history)
+        history += [{"role": "user", "content": turn}, {"role": "assistant", "content": state["answer"]}]
 
-    assert final_state["route"] == expected_route
-
-    if expected_source is not None:
-        sources = [c["source"] for c in (final_state.get("retrieved_chunks") or [])]
-        assert expected_source in sources
-
-    if expected_substring is not None:
-        assert expected_substring.lower() in final_state["answer"].lower()
+    totals = turn_totals(state["steps"])
+    scored = evaluation.score_case(case, state["answer"], totals["tools_used"], state.get("sources") or [])
+    assert scored["passed"], f"failed checks {scored['checks']}; answer: {state['answer']!r}"
+    assert totals["steps"] <= 2 * config.MAX_AGENT_STEPS

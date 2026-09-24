@@ -1,0 +1,2062 @@
+{
+  "run_at": "2026-09-24 15:09 UTC",
+  "git_sha": "367bd30",
+  "agent_model": "claude-sonnet-5",
+  "judge_model": "claude-opus-5",
+  "total_eval_cost_usd": 1.1468873999999996,
+  "headline": {
+    "cases": 56,
+    "errors": 0,
+    "pass_rate": 1.0,
+    "tool_selection_accuracy": 1.0,
+    "citation_precision": 1.0,
+    "citation_recall": 1.0,
+    "refusal_precision": 1.0,
+    "refusal_recall": 1.0,
+    "faithfulness": 4.910714285714286,
+    "correctness": 4.964285714285714,
+    "latency_p50_s": 4.122190200010664,
+    "latency_p95_s": 7.0826136999967275,
+    "cost_per_question_usd": 0.009169328571428572
+  },
+  "retrieval": {
+    "cases": 35,
+    "mrr": 0.9857142857142858,
+    "rows": [
+      {
+        "k": 1,
+        "hit_at_k": 0.9714285714285714,
+        "recall_at_k": 0.9285714285714286
+      },
+      {
+        "k": 2,
+        "hit_at_k": 1.0,
+        "recall_at_k": 0.9714285714285714
+      },
+      {
+        "k": 4,
+        "hit_at_k": 1.0,
+        "recall_at_k": 1.0
+      },
+      {
+        "k": 6,
+        "hit_at_k": 1.0,
+        "recall_at_k": 1.0
+      }
+    ],
+    "misses_at_configured_k": [],
+    "configured_k": 4
+  },
+  "by_category": [
+    {
+      "category": "chit-chat",
+      "cases": 4,
+      "pass_rate": 1.0,
+      "tool_selection_accuracy": 1.0,
+      "correctness": 5.0
+    },
+    {
+      "category": "harness",
+      "cases": 5,
+      "pass_rate": 1.0,
+      "tool_selection_accuracy": 1.0,
+      "correctness": 5.0
+    },
+    {
+      "category": "calculation",
+      "cases": 4,
+      "pass_rate": 1.0,
+      "tool_selection_accuracy": 1.0,
+      "correctness": 5.0
+    },
+    {
+      "category": "single-doc",
+      "cases": 18,
+      "pass_rate": 1.0,
+      "tool_selection_accuracy": 1.0,
+      "correctness": 5.0
+    },
+    {
+      "category": "finance",
+      "cases": 9,
+      "pass_rate": 1.0,
+      "tool_selection_accuracy": 1.0,
+      "correctness": 5.0
+    },
+    {
+      "category": "multi-hop",
+      "cases": 5,
+      "pass_rate": 1.0,
+      "tool_selection_accuracy": 1.0,
+      "correctness": 5.0
+    },
+    {
+      "category": "multi-turn",
+      "cases": 5,
+      "pass_rate": 1.0,
+      "tool_selection_accuracy": 1.0,
+      "correctness": 5.0
+    },
+    {
+      "category": "out-of-scope",
+      "cases": 6,
+      "pass_rate": 1.0,
+      "tool_selection_accuracy": 1.0,
+      "correctness": 4.666666666666667
+    }
+  ],
+  "tool_confusion": {
+    "labels": [
+      "none",
+      "search_knowledge_base",
+      "query_financials",
+      "calculator",
+      "explain_harness"
+    ],
+    "matrix": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        25,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        5
+      ]
+    ]
+  },
+  "model_comparison": [],
+  "cases": [
+    {
+      "id": "chat-hi",
+      "category": "chit-chat",
+      "question": "hi",
+      "answer": "Hello! I'm the Bearn Agent. I can help with questions about Bearn Analytics' HR policies, IT setup, security, remote work, product/billing details, expense and travel policy, company history, or quarterly financials (revenue, expenses, headcount, ARR, etc.). What can I help you with today?",
+      "tools_used": [],
+      "expected_tools": [],
+      "sources": [],
+      "latency_s": 2.7403024999948684,
+      "agent_cost_usd": 0.006494,
+      "checks": {
+        "tools": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [],
+      "citation_precision": null,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Greeting with self-description consistent with instructions and no unsupported company facts."
+      },
+      "total_cost_usd": 0.015049
+    },
+    {
+      "id": "chat-thanks",
+      "category": "chit-chat",
+      "question": "thanks!",
+      "answer": "You're welcome! Let me know if you have any other questions about Bearn's policies, products, or financials.",
+      "tools_used": [],
+      "expected_tools": [],
+      "sources": [],
+      "latency_s": 1.4103695999947377,
+      "agent_cost_usd": 0.005809,
+      "checks": {
+        "tools": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [],
+      "citation_precision": null,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Brief polite acknowledgement with no factual claims beyond its stated scope, matching the reference."
+      },
+      "total_cost_usd": 0.014109
+    },
+    {
+      "id": "chat-how-are-you",
+      "category": "chit-chat",
+      "question": "good morning, how are you?",
+      "answer": "Good morning! I'm doing well, thanks for asking. I'm here to help with questions about Bearn Analytics — things like HR policies, IT setup, security, remote work, product pricing/features, expenses and travel, or quarterly financials (revenue, ARR, headcount, etc.). What can I help you with today?",
+      "tools_used": [],
+      "expected_tools": [],
+      "sources": [],
+      "latency_s": 2.120217900010175,
+      "agent_cost_usd": 0.006519,
+      "checks": {
+        "tools": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [],
+      "citation_precision": null,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Friendly greeting with capability description consistent with instructions; no unsupported factual claims."
+      },
+      "total_cost_usd": 0.015109000000000001
+    },
+    {
+      "id": "chat-capabilities",
+      "category": "chit-chat",
+      "question": "what can you do?",
+      "answer": "I'm the Bearn Agent, an internal assistant for Bearn Analytics. Here's what I can help with:\n\n- **Company policies** – HR (PTO, benefits, parental leave), IT setup, security policy, remote-work handbook, expense/travel policy\n- **Product info** – pricing, billing, features, API limits\n- **Company history** – funding, annual report highlights\n- **Financial data** – quarterly revenue, expenses, profit, ARR, headcount, customers, churn, cash reserves (Q1 2023–Q2 2025), including comparisons and growth calculations\n- **Arithmetic** – any exact calculations needed alongside the above\n- **Questions about myself** – my architecture, tools, models, and limits\n\n[source: harness.md]\n\nWhat would you like to know?",
+      "tools_used": [
+        "explain_harness"
+      ],
+      "expected_tools": null,
+      "sources": [
+        "harness.md"
+      ],
+      "latency_s": 7.259736000007251,
+      "agent_cost_usd": 0.0104179,
+      "checks": {},
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "harness.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 4,
+        "correctness": 5,
+        "rationale": "Capabilities list matches the instructions and reference, but the specific financial coverage range \"Q1 2023–Q2 2025\" is not supported by the tool results or instructions."
+      },
+      "total_cost_usd": 0.0242029
+    },
+    {
+      "id": "harness-routing",
+      "category": "harness",
+      "question": "How do you decide whether to search the knowledge base?",
+      "answer": "I (Claude) decide this myself each turn — there's no separate router. I look at the tool descriptions and pick `search_knowledge_base` when a question is about Bearn's policies or facts: HR (PTO, benefits, leave), IT setup, security, the remote-work handbook, product FAQs (pricing, billing, features, API limits), expense/travel policy, or company history/funding. If it instead involves quarterly numbers (revenue, expenses, headcount, etc.), I use `query_financials`; for other math I use `calculator`; and for questions about myself, `explain_harness`. I can call multiple tools together if a question needs both context and numbers. [source: harness.md]",
+      "tools_used": [
+        "explain_harness"
+      ],
+      "expected_tools": [
+        "explain_harness"
+      ],
+      "sources": [
+        "harness.md"
+      ],
+      "latency_s": 6.464320899991435,
+      "agent_cost_usd": 0.0106876,
+      "checks": {
+        "tools": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "harness.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All claims about tool selection and the four tools match the explain_harness result, and the answer covers the key point that the model itself chooses tools with no separate router."
+      },
+      "total_cost_usd": 0.0243076
+    },
+    {
+      "id": "harness-model",
+      "category": "harness",
+      "question": "Which language model are you running on?",
+      "answer": "I run on **claude-sonnet-5** (low effort setting), called directly via the Anthropic SDK. Retrieval uses the `all-MiniLM-L6-v2` embedding model, and evaluations use `claude-opus-5` as a judge. [source: harness.md]",
+      "tools_used": [
+        "explain_harness"
+      ],
+      "expected_tools": [
+        "explain_harness"
+      ],
+      "sources": [
+        "harness.md"
+      ],
+      "latency_s": 3.5566327999986243,
+      "agent_cost_usd": 0.0083162,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "harness.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All details match the tool result and the reference, with proper citation."
+      },
+      "total_cost_usd": 0.0184562
+    },
+    {
+      "id": "harness-eval",
+      "category": "harness",
+      "question": "How is your answer quality evaluated?",
+      "answer": "My answer quality is evaluated offline via a dataset covering chit-chat, harness questions, calculations, single-doc facts, finance queries, multi-hop/multi-turn questions, and out-of-scope cases. Key metrics [source: harness.md]:\n\n- **Retrieval**: hit@k, MRR, recall@k\n- **Tool-selection accuracy** (confusion matrix)\n- **Answer correctness**: expected substrings/numbers within tolerance\n- **Citation precision & recall**\n- **Refusal precision/recall** on out-of-scope questions\n- **LLM-as-judge** faithfulness and correctness (1–5 scale)\n- **Latency** (p50/p95) and **cost per question**\n\nLatest run (56 cases): 94.6% pass rate, 100% tool-selection accuracy, faithfulness 4.77/5, correctness 4.95/5, ~$0.009/question, p50 latency ~4.3s.",
+      "tools_used": [
+        "explain_harness"
+      ],
+      "expected_tools": [
+        "explain_harness"
+      ],
+      "sources": [
+        "harness.md"
+      ],
+      "latency_s": 5.228437800004031,
+      "agent_cost_usd": 0.0116068,
+      "checks": {
+        "tools": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "harness.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All metrics and latest-run figures match the tool output and the answer fully covers the reference points."
+      },
+      "total_cost_usd": 0.0253018
+    },
+    {
+      "id": "harness-guardrails",
+      "category": "harness",
+      "question": "What stops someone from running up a huge API bill on this demo?",
+      "answer": "Several safeguards limit spend on this demo:\n\n- **Per-session cap**: max 15 questions per session, with a maximum question length.\n- **Step cap**: each question is limited to 5 agent tool-call steps.\n- **Shared daily budget**: a $2.00/day spend cap, after which the demo pauses until the next day.\n- **Hard backstop**: a monthly spend limit enforced directly in the Anthropic console.\n\n[source: harness.md]",
+      "tools_used": [
+        "explain_harness"
+      ],
+      "expected_tools": [
+        "explain_harness"
+      ],
+      "sources": [
+        "harness.md"
+      ],
+      "latency_s": 6.60073750000447,
+      "agent_cost_usd": 0.0095307,
+      "checks": {
+        "tools": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "harness.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All listed guardrails and numbers match the explain_harness output and cover the reference points."
+      },
+      "total_cost_usd": 0.0203407
+    },
+    {
+      "id": "harness-vector-db",
+      "category": "harness",
+      "question": "What vector database do you use for retrieval?",
+      "answer": "I use a **FAISS** index (inner-product over L2-normalized vectors, i.e. cosine similarity) for retrieval. Documents are chunked by markdown headers (or per-quarter for financial data) and embedded with the `all-MiniLM-L6-v2` sentence-transformers model, retrieving the top 4 chunks per query. [source: harness.md]",
+      "tools_used": [
+        "explain_harness"
+      ],
+      "expected_tools": [
+        "explain_harness"
+      ],
+      "sources": [
+        "harness.md"
+      ],
+      "latency_s": 4.822770700004185,
+      "agent_cost_usd": 0.0087495,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "harness.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All details match the explain_harness output and the answer correctly identifies FAISS with sentence-transformers embeddings."
+      },
+      "total_cost_usd": 0.019584499999999998
+    },
+    {
+      "id": "calc-hotel-high-cost",
+      "category": "calculation",
+      "question": "What's 15% of the hotel spend cap in high-cost cities?",
+      "answer": "The hotel spend cap in high-cost cities (New York, San Francisco, London, Tokyo) is $400/night, so 15% of that is **$60** [source: finance_expense_policy.md].",
+      "tools_used": [
+        "search_knowledge_base",
+        "calculator"
+      ],
+      "expected_tools": [
+        "search_knowledge_base",
+        "calculator"
+      ],
+      "sources": [
+        "finance_expense_policy.md"
+      ],
+      "latency_s": 8.171683399996255,
+      "agent_cost_usd": 0.0103438,
+      "checks": {
+        "tools": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "finance_expense_policy.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Answer matches tool results and reference exactly, with proper citation."
+      },
+      "total_cost_usd": 0.0215038
+    },
+    {
+      "id": "calc-pto-accrual",
+      "category": "calculation",
+      "question": "How many PTO days does a first-year employee accrue after 7 months?",
+      "answer": "A first-year employee accrues **8.75 PTO days** after 7 months, based on the 15 days/year (1.25 days/month) accrual rate for years 1–3 [source: hr_policies_pto.md].",
+      "tools_used": [
+        "search_knowledge_base",
+        "calculator"
+      ],
+      "expected_tools": [
+        "search_knowledge_base",
+        "calculator"
+      ],
+      "sources": [
+        "hr_policies_pto.md"
+      ],
+      "latency_s": 6.60112599999411,
+      "agent_cost_usd": 0.0101898,
+      "checks": {
+        "tools": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "hr_policies_pto.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Answer matches tool results and reference calculation with proper citation."
+      },
+      "total_cost_usd": 0.0216598
+    },
+    {
+      "id": "calc-team-annual",
+      "category": "calculation",
+      "question": "How much does the Team plan cost per year with the annual billing discount?",
+      "answer": "The Team plan is $99/month, or $1,188/year at monthly rates. With the 20% annual billing discount, it costs **$950.40/year** [source: product_faq_billing.md].",
+      "tools_used": [
+        "search_knowledge_base",
+        "search_knowledge_base",
+        "calculator"
+      ],
+      "expected_tools": [
+        "search_knowledge_base",
+        "calculator"
+      ],
+      "sources": [
+        "economy_annual_report_summary.md",
+        "finance_expense_policy.md",
+        "hr_policies_benefits.md",
+        "product_faq_billing.md"
+      ],
+      "latency_s": 10.251911300001666,
+      "agent_cost_usd": 0.012868600000000001,
+      "checks": {
+        "tools": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "product_faq_billing.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All figures match tool results and the calculator output, and the answer matches the reference exactly with proper citation."
+      },
+      "total_cost_usd": 0.027093600000000002
+    },
+    {
+      "id": "calc-dinner-split",
+      "category": "calculation",
+      "question": "We had a $1,380 team dinner for 12 people. How much is that per person?",
+      "answer": "That comes to $115 per person.\n\nIf you'd like, I can also check the expense policy to confirm whether this is within Bearn's per-person meal limit for team dinners.",
+      "tools_used": [
+        "calculator"
+      ],
+      "expected_tools": [
+        "calculator"
+      ],
+      "sources": [],
+      "latency_s": 4.832859699992696,
+      "agent_cost_usd": 0.0073969000000000005,
+      "checks": {
+        "tools": true,
+        "number": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [],
+      "citation_precision": null,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "The math matches the calculator result and reference, with no unsupported factual claims."
+      },
+      "total_cost_usd": 0.0158769
+    },
+    {
+      "id": "fact-pto-new",
+      "category": "single-doc",
+      "question": "How many PTO days do new employees get?",
+      "answer": "New employees (Years 1–3) accrue **15 PTO days per year**, accumulated monthly at 1.25 days/month. This increases to 20 days/year after 3 years, and 25 days/year after 7 years. Part-time employees accrue on a pro-rated basis. [source: hr_policies_pto.md]",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "hr_policies_pto.md"
+      ],
+      "latency_s": 4.150693599993247,
+      "agent_cost_usd": 0.004195600000000001,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "hr_policies_pto.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All claims match the retrieved PTO policy chunk and the answer correctly states 15 days/1.25 per month with accurate extra context."
+      },
+      "total_cost_usd": 0.0163856
+    },
+    {
+      "id": "fact-vpn",
+      "category": "single-doc",
+      "question": "What VPN tool does the company use?",
+      "answer": "Bearn Analytics uses **Tailscale** as its VPN solution. It creates a private mesh network between enrolled devices (rather than a traditional central-gateway VPN), which keeps connections fast for remote/international employees. It's required for internal tools like Confluence, Jira, staging/QA, and admin dashboards, but not for production customer-facing services (which are public-facing) [source: it_setup_vpn_access.md].",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "it_setup_laptop.md",
+        "it_setup_vpn_access.md"
+      ],
+      "latency_s": 4.989911500000744,
+      "agent_cost_usd": 0.0097366,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "it_setup_vpn_access.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All claims match the tool results and the answer correctly identifies Tailscale with cited source."
+      },
+      "total_cost_usd": 0.0218816
+    },
+    {
+      "id": "fact-refresh-enterprise",
+      "category": "single-doc",
+      "question": "What's the data refresh rate on the Enterprise plan?",
+      "answer": "The Enterprise plan gets **real-time** data refresh via change-data-capture (where supported by the source database), compared to every 15 minutes for Starter/Team plans. Manual \"refresh now\" is available on all tiers. [source: product_faq_features.md]",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "product_faq_billing.md",
+        "product_faq_features.md"
+      ],
+      "latency_s": 4.538354400006938,
+      "agent_cost_usd": 0.0089707,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "product_faq_features.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All claims match the retrieved FAQ chunk and the answer correctly states real-time CDC refresh with accurate context and citation."
+      },
+      "total_cost_usd": 0.0207107
+    },
+    {
+      "id": "fact-seed-lead",
+      "category": "single-doc",
+      "question": "Who led the company's seed funding round?",
+      "answer": "Bearn Analytics' $2.5M seed round (early 2021) was led by **Cascade Ventures**, with participation from Birchline Capital. [source: economy_annual_report_summary.md]",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "economy_annual_report_summary.md",
+        "hr_policies_benefits.md",
+        "it_setup_vpn_access.md"
+      ],
+      "latency_s": 3.9377165000041714,
+      "agent_cost_usd": 0.0088418,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "economy_annual_report_summary.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Answer matches the tool result and reference exactly, with proper citation."
+      },
+      "total_cost_usd": 0.0202518
+    },
+    {
+      "id": "fact-hotel-standard",
+      "category": "single-doc",
+      "question": "What's the hotel spend cap for business travel?",
+      "answer": "Hotel spend is capped at **$250/night** in standard cost-of-living cities and **$400/night** in high-cost cities (New York, San Francisco, London, Tokyo). Bookings must go through Navan. [source: finance_expense_policy.md]",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "finance_expense_policy.md"
+      ],
+      "latency_s": 3.136503800007631,
+      "agent_cost_usd": 0.0088374,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "finance_expense_policy.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Matches the tool result and reference exactly, with proper citation."
+      },
+      "total_cost_usd": 0.0198224
+    },
+    {
+      "id": "fact-401k",
+      "category": "single-doc",
+      "question": "How much does Bearn match on 401(k) contributions?",
+      "answer": "Bearn matches 100% of employee 401(k) contributions up to 4% of base salary, with immediate vesting on the match. Employees are eligible to enroll on their first day, and contributions can be pre-tax, Roth, or a mix of both. [source: hr_policies_benefits.md]",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "hr_policies_benefits.md",
+        "hr_policies_pto.md"
+      ],
+      "latency_s": 4.576053500000853,
+      "agent_cost_usd": 0.0090155,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "hr_policies_benefits.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All claims match the retrieved chunk and the answer fully covers the reference."
+      },
+      "total_cost_usd": 0.0202955
+    },
+    {
+      "id": "fact-parental-leave",
+      "category": "single-doc",
+      "question": "How long is parental leave?",
+      "answer": "Bearn Analytics offers **16 weeks of fully paid parental leave** for all new parents (birth, adoption, or foster placement), regardless of gender or caregiver role. It can be taken continuously or split into two blocks within the first 12 months after the qualifying event, with manager approval needed for the split option [source: hr_policies_benefits.md].",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "company_handbook_remote_work.md",
+        "hr_policies_benefits.md",
+        "hr_policies_pto.md"
+      ],
+      "latency_s": 4.179983000009088,
+      "agent_cost_usd": 0.0091135,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "hr_policies_benefits.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All claims match the retrieved chunk and the answer correctly states 16 weeks fully paid with accurate details and citation."
+      },
+      "total_cost_usd": 0.020743499999999998
+    },
+    {
+      "id": "fact-password-length",
+      "category": "single-doc",
+      "question": "What's the minimum password length?",
+      "answer": "The minimum password length at Bearn is **14 characters**, and passwords must include a mix of uppercase, lowercase, numbers, and symbols, avoid reuse of the last 10 passwords, and be changed every 180 days [source: security_policy_password.md].",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "security_policy_password.md"
+      ],
+      "latency_s": 3.832030199992005,
+      "agent_cost_usd": 0.008801199999999999,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "security_policy_password.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All claims match the tool results and the answer correctly states the 14-character minimum with cited source."
+      },
+      "total_cost_usd": 0.0199162
+    },
+    {
+      "id": "fact-lockout",
+      "category": "single-doc",
+      "question": "How long is an account locked after too many failed logins?",
+      "answer": "After 5 consecutive failed login attempts, an account is locked for 15 minutes. Repeated lockouts trigger an automatic security review and notify the IT security team. [source: security_policy_password.md]",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "product_faq_billing.md",
+        "security_policy_password.md"
+      ],
+      "latency_s": 4.581353099987609,
+      "agent_cost_usd": 0.008687400000000001,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "security_policy_password.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Matches the tool result and reference exactly, with proper citation."
+      },
+      "total_cost_usd": 0.019662400000000003
+    },
+    {
+      "id": "fact-office-days",
+      "category": "single-doc",
+      "question": "Which days do hybrid employees need to be in the office?",
+      "answer": "Hybrid employees living within 50 miles of a Bearn office must be in-office on **Tuesdays and Thursdays**; other days are flexible between home and office. Employees beyond that radius are considered fully remote. [source: company_handbook_remote_work.md]",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "company_handbook_remote_work.md"
+      ],
+      "latency_s": 3.70407590000832,
+      "agent_cost_usd": 0.008840299999999999,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "company_handbook_remote_work.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Answer matches the tool result and reference exactly, with proper citation."
+      },
+      "total_cost_usd": 0.019930299999999998
+    },
+    {
+      "id": "fact-core-hours",
+      "category": "single-doc",
+      "question": "What are the company's core hours?",
+      "answer": "Bearn's core hours are **10:00 AM–3:00 PM Eastern Time**, during which all employees (regardless of location) must be available for meetings and collaboration. Outside those hours, employees can structure their day flexibly as long as deliverables are met [source: company_handbook_remote_work.md].",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "company_handbook_remote_work.md"
+      ],
+      "latency_s": 3.624695899998187,
+      "agent_cost_usd": 0.0089862,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "company_handbook_remote_work.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Answer matches the tool result and reference exactly, with proper citation."
+      },
+      "total_cost_usd": 0.0201512
+    },
+    {
+      "id": "fact-team-price",
+      "category": "single-doc",
+      "question": "How much is the Team plan per month?",
+      "answer": "The Team plan is **$99/month**, which adds collaboration features, shared dashboards, and additional data connectors [source: product_faq_billing.md].",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "finance_expense_policy.md",
+        "product_faq_billing.md"
+      ],
+      "latency_s": 4.366534800006775,
+      "agent_cost_usd": 0.0084591,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "product_faq_billing.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Matches the tool result and reference exactly, with proper citation."
+      },
+      "total_cost_usd": 0.0191691
+    },
+    {
+      "id": "fact-refund",
+      "category": "single-doc",
+      "question": "What's the refund policy for new subscribers?",
+      "answer": "New subscribers get a **14-day refund policy**: cancel within 14 days of your first payment for a full, no-questions-asked refund. After that window, cancellations take effect at the end of the current billing period, with no partial refunds for unused time [source: product_faq_billing.md].",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "finance_expense_policy.md",
+        "product_faq_billing.md"
+      ],
+      "latency_s": 3.559173399989959,
+      "agent_cost_usd": 0.0087647,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "product_faq_billing.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Accurately reflects the 14-day full refund policy with correct citation and added supported detail."
+      },
+      "total_cost_usd": 0.0197647
+    },
+    {
+      "id": "fact-connectors",
+      "category": "single-doc",
+      "question": "Which data sources does the platform connect to natively?",
+      "answer": "Bearn Analytics natively connects to: **PostgreSQL, Snowflake, BigQuery, MySQL, and Amazon Redshift**. For other sources, custom connectors can be built via the platform's REST API. [source: product_faq_features.md]",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "product_faq_features.md"
+      ],
+      "latency_s": 3.010346099996241,
+      "agent_cost_usd": 0.0088799,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "product_faq_features.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Lists all five native sources plus the REST API custom connector note, all supported by the tool result and properly cited."
+      },
+      "total_cost_usd": 0.020384899999999997
+    },
+    {
+      "id": "fact-laptop",
+      "category": "single-doc",
+      "question": "What laptop do new hires get?",
+      "answer": "New hires are issued a **MacBook Pro 14\" (M-series)** by default, refreshed on a 3-year cycle. Engineering employees needing Windows-specific tooling can request a Windows laptop via an IT Helpdesk ticket, subject to manager approval [source: it_setup_laptop.md].",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "it_setup_laptop.md"
+      ],
+      "latency_s": 3.0944661000103224,
+      "agent_cost_usd": 0.009361399999999999,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "it_setup_laptop.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All claims match the tool results and the answer correctly states the MacBook Pro 14\" M-series with accurate extra detail and citation."
+      },
+      "total_cost_usd": 0.021696399999999998
+    },
+    {
+      "id": "fact-expense-tool",
+      "category": "single-doc",
+      "question": "Where do I submit my expenses, and by when?",
+      "answer": "Submit business expenses through **Ramp**, within **30 days** of the purchase date, with an itemized receipt attached. If submitted later than 30 days, they'll need manager approval to be reimbursed. [source: finance_expense_policy.md]",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "economy_annual_report_summary.md",
+        "finance_expense_policy.md",
+        "hr_policies_pto.md"
+      ],
+      "latency_s": 3.6503189000068232,
+      "agent_cost_usd": 0.0087849,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "finance_expense_policy.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Answer matches the tool result and reference exactly, with proper citation."
+      },
+      "total_cost_usd": 0.019829899999999998
+    },
+    {
+      "id": "fact-abroad",
+      "category": "single-doc",
+      "question": "How long can I work from another country without special approval?",
+      "answer": "You can work from another country for up to **30 consecutive days per year** without special approval, provided you stay within 3 hours of your home time zone during core hours. Longer stays require HR and Legal sign-off due to tax and employment-law implications. [source: company_handbook_remote_work.md]",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "company_handbook_remote_work.md"
+      ],
+      "latency_s": 4.245147599998745,
+      "agent_cost_usd": 0.008959499999999999,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "company_handbook_remote_work.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Answer matches the tool result and reference exactly, with proper citation."
+      },
+      "total_cost_usd": 0.020174499999999998
+    },
+    {
+      "id": "fact-api-limit",
+      "category": "single-doc",
+      "question": "What's the API rate limit for Enterprise customers?",
+      "answer": "Enterprise-tier customers are limited to **1,000 requests per minute** per API key, with the option to request a further increase through their account manager. Requests beyond this limit return an HTTP 429 with a `Retry-After` header. [source: product_faq_features.md]",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "hr_policies_benefits.md",
+        "product_faq_billing.md",
+        "product_faq_features.md"
+      ],
+      "latency_s": 4.73366649998934,
+      "agent_cost_usd": 0.0090978,
+      "checks": {
+        "tools": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "product_faq_features.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All claims match the retrieved FAQ chunk and the answer gives the correct 1,000 req/min limit with proper citation."
+      },
+      "total_cost_usd": 0.0210478
+    },
+    {
+      "id": "fin-profit-growth",
+      "category": "finance",
+      "question": "How much did net profit grow from Q1 2025 to Q2 2025, in percent?",
+      "answer": "Net profit grew by **14.29%** from Q1 2025 to Q2 2025 [source: economy_quarterly_financials.csv].",
+      "tools_used": [
+        "query_financials"
+      ],
+      "expected_tools": [
+        "query_financials"
+      ],
+      "sources": [
+        "economy_quarterly_financials.csv"
+      ],
+      "latency_s": 4.156177099997876,
+      "agent_cost_usd": 0.0082375,
+      "checks": {
+        "tools": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "economy_quarterly_financials.csv"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "The 14.29% figure matches the tool result and reference, correctly cited; omitting the dollar amounts (not returned by the tool) is acceptable."
+      },
+      "total_cost_usd": 0.017847500000000002
+    },
+    {
+      "id": "fin-revenue-growth-total",
+      "category": "finance",
+      "question": "By what percentage has quarterly revenue grown from Q1 2023 to Q2 2025?",
+      "answer": "Quarterly revenue grew by approximately **90.31%** from Q1 2023 to Q2 2025 [source: economy_quarterly_financials.csv].",
+      "tools_used": [
+        "query_financials"
+      ],
+      "expected_tools": [
+        "query_financials"
+      ],
+      "sources": [
+        "economy_quarterly_financials.csv"
+      ],
+      "latency_s": 3.9496361000055913,
+      "agent_cost_usd": 0.0082706,
+      "checks": {
+        "tools": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "economy_quarterly_financials.csv"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "The 90.31% figure comes directly from the tool result and matches the reference, with proper citation."
+      },
+      "total_cost_usd": 0.0174556
+    },
+    {
+      "id": "fin-avg-margin-2024",
+      "category": "finance",
+      "question": "What was the average profit margin across the four quarters of 2024?",
+      "answer": "The average profit margin across the four quarters of 2024 was **25.58%** [source: economy_quarterly_financials.csv].",
+      "tools_used": [
+        "query_financials"
+      ],
+      "expected_tools": [
+        "query_financials"
+      ],
+      "sources": [
+        "economy_quarterly_financials.csv"
+      ],
+      "latency_s": 3.461674899997888,
+      "agent_cost_usd": 0.008380700000000001,
+      "checks": {
+        "tools": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "economy_quarterly_financials.csv"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "The answer matches the tool result and reference average of 25.575% (rounded), with proper citation."
+      },
+      "total_cost_usd": 0.0176457
+    },
+    {
+      "id": "fin-max-headcount",
+      "category": "finance",
+      "question": "In which quarter was headcount highest, and what was it?",
+      "answer": "Headcount peaked in Q2 2025 at 58 employees [source: economy_quarterly_financials.csv].",
+      "tools_used": [
+        "query_financials"
+      ],
+      "expected_tools": [
+        "query_financials"
+      ],
+      "sources": [
+        "economy_quarterly_financials.csv"
+      ],
+      "latency_s": 3.8479487000004156,
+      "agent_cost_usd": 0.0080228,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "economy_quarterly_financials.csv"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Matches tool result and reference exactly with proper citation."
+      },
+      "total_cost_usd": 0.0169778
+    },
+    {
+      "id": "fin-min-churn",
+      "category": "finance",
+      "question": "What was the lowest churn rate we've recorded?",
+      "answer": "The lowest churn rate recorded was **1.6%**, in Q2 2025 [source: economy_quarterly_financials.csv].",
+      "tools_used": [
+        "query_financials"
+      ],
+      "expected_tools": [
+        "query_financials"
+      ],
+      "sources": [
+        "economy_quarterly_financials.csv"
+      ],
+      "latency_s": 3.919700600003125,
+      "agent_cost_usd": 0.008180100000000001,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "economy_quarterly_financials.csv"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Matches tool result and reference exactly with proper citation."
+      },
+      "total_cost_usd": 0.0172101
+    },
+    {
+      "id": "fin-customer-change",
+      "category": "finance",
+      "question": "How many customers did we add between Q2 2024 and Q2 2025?",
+      "answer": "Bearn added 73 customers between Q2 2024 and Q2 2025 [source: economy_quarterly_financials.csv].",
+      "tools_used": [
+        "query_financials"
+      ],
+      "expected_tools": [
+        "query_financials"
+      ],
+      "sources": [
+        "economy_quarterly_financials.csv"
+      ],
+      "latency_s": 3.9563266999903135,
+      "agent_cost_usd": 0.008199,
+      "checks": {
+        "tools": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "economy_quarterly_financials.csv"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "The answer's figure of 73 added customers matches the tool result and reference, with proper citation, though it omits the endpoint values which weren't returned."
+      },
+      "total_cost_usd": 0.017629
+    },
+    {
+      "id": "fin-profit-2023",
+      "category": "finance",
+      "question": "What was total net profit across all of 2023?",
+      "answer": "Total net profit across all of 2023 was **$680,000** [source: economy_quarterly_financials.csv].",
+      "tools_used": [
+        "query_financials"
+      ],
+      "expected_tools": [
+        "query_financials"
+      ],
+      "sources": [
+        "economy_quarterly_financials.csv"
+      ],
+      "latency_s": 4.65487430000212,
+      "agent_cost_usd": 0.008292,
+      "checks": {
+        "tools": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "economy_quarterly_financials.csv"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "The answer matches the tool result and reference sum of $680,000 with proper citation."
+      },
+      "total_cost_usd": 0.017367
+    },
+    {
+      "id": "fin-arr-growth",
+      "category": "finance",
+      "question": "What was ARR growth in percent from Q1 2024 to Q2 2025?",
+      "answer": "ARR grew by approximately **44.9%** from Q1 2024 to Q2 2025 [source: economy_quarterly_financials.csv].",
+      "tools_used": [
+        "query_financials"
+      ],
+      "expected_tools": [
+        "query_financials"
+      ],
+      "sources": [
+        "economy_quarterly_financials.csv"
+      ],
+      "latency_s": 2.688723300001584,
+      "agent_cost_usd": 0.0081996,
+      "checks": {
+        "tools": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "economy_quarterly_financials.csv"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "The 44.9% figure matches the tool result and reference, properly cited, though absolute values weren't returned by the tool."
+      },
+      "total_cost_usd": 0.017514599999999998
+    },
+    {
+      "id": "fin-opex-q3-2024",
+      "category": "finance",
+      "question": "What were operating expenses in Q3 2024?",
+      "answer": "Operating expenses in Q3 2024 were **$1,105,000**. [source: economy_quarterly_financials.csv]",
+      "tools_used": [
+        "query_financials"
+      ],
+      "expected_tools": [
+        "query_financials"
+      ],
+      "sources": [
+        "economy_quarterly_financials.csv"
+      ],
+      "latency_s": 3.6472537999943597,
+      "agent_cost_usd": 0.0080499,
+      "checks": {
+        "tools": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "economy_quarterly_financials.csv"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Matches the tool result and reference exactly with proper citation."
+      },
+      "total_cost_usd": 0.0167049
+    },
+    {
+      "id": "multi-stipends",
+      "category": "multi-hop",
+      "question": "How does the home-office stipend compare to the wellness stipend?",
+      "answer": "- Home-office stipend: $500/year for fully remote employees and hybrid employees on remote days, covering desks, chairs, monitors, and other ergonomic equipment [source: company_handbook_remote_work.md]\n- Wellness stipend: $300/year, reimbursable for gym memberships, fitness classes, or mental health apps [source: hr_policies_benefits.md]\n\nThe home-office stipend is $200/year higher than the wellness stipend.",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "company_handbook_remote_work.md",
+        "finance_expense_policy.md",
+        "hr_policies_benefits.md"
+      ],
+      "latency_s": 4.0253659000009065,
+      "agent_cost_usd": 0.0095634,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "company_handbook_remote_work.md",
+        "hr_policies_benefits.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Both stipend amounts and details match the tool results with correct citations, and the $200 difference is accurate."
+      },
+      "total_cost_usd": 0.0213684
+    },
+    {
+      "id": "multi-password-manager",
+      "category": "multi-hop",
+      "question": "Which password manager do we use, and how does it get installed on a new laptop?",
+      "answer": "Bearn uses **1Password** as its company password manager, provisioned to all employees during onboarding [source: security_policy_password.md].\n\nOn a new laptop, it's installed automatically: after signing in with Okta SSO, the new hire runs the onboarding script `bearn-setup.sh`, which installs standard tooling including Git, the VPN client, Slack, and 1Password (plus role-specific software) [source: it_setup_laptop.md].",
+      "tools_used": [
+        "search_knowledge_base",
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "it_setup_laptop.md",
+        "security_policy_password.md"
+      ],
+      "latency_s": 7.0826136999967275,
+      "agent_cost_usd": 0.0127708,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "security_policy_password.md",
+        "it_setup_laptop.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Both claims are directly supported by the tool results with proper citations, and the answer matches the reference exactly."
+      },
+      "total_cost_usd": 0.028405800000000002
+    },
+    {
+      "id": "multi-mfa-vpn",
+      "category": "multi-hop",
+      "question": "What MFA app is required, and is SMS allowed as a second factor?",
+      "answer": "Okta Verify is the mandatory MFA app for all employees and systems, with push notification as the default method. SMS-based MFA is disabled company-wide due to SIM-swapping risk, so it is **not** allowed as a second factor. Hardware security keys (YubiKey) are available on request for employees handling sensitive customer data. [source: security_policy_password.md]",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": [
+        "search_knowledge_base"
+      ],
+      "sources": [
+        "it_setup_laptop.md",
+        "it_setup_vpn_access.md",
+        "security_policy_password.md"
+      ],
+      "latency_s": 4.382827199995518,
+      "agent_cost_usd": 0.0095913,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "security_policy_password.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "All claims match the retrieved security policy chunk and the answer fully addresses both parts of the question with correct citation."
+      },
+      "total_cost_usd": 0.0220463
+    },
+    {
+      "id": "multi-seed-and-profit",
+      "category": "multi-hop",
+      "question": "How much did we raise in the seed round, and what was net profit in Q2 2025?",
+      "answer": "Bearn raised a **$2.5 million seed round** in early 2021, led by Cascade Ventures with participation from Birchline Capital [source: economy_annual_report_summary.md]. Net profit in Q2 2025 was **$560,000** [source: economy_quarterly_financials.csv].",
+      "tools_used": [
+        "search_knowledge_base",
+        "query_financials"
+      ],
+      "expected_tools": [
+        "search_knowledge_base",
+        "query_financials"
+      ],
+      "sources": [
+        "economy_annual_report_summary.md",
+        "economy_quarterly_financials.csv",
+        "hr_policies_benefits.md"
+      ],
+      "latency_s": 6.243280599999707,
+      "agent_cost_usd": 0.0110446,
+      "checks": {
+        "tools": true,
+        "answer_contains": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "economy_annual_report_summary.md",
+        "economy_quarterly_financials.csv"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Both figures and the funding details match the tool results exactly, with proper citations."
+      },
+      "total_cost_usd": 0.023589600000000002
+    },
+    {
+      "id": "multi-cash-runway",
+      "category": "multi-hop",
+      "question": "What were cash reserves at the end of 2024, and what does that mean for runway?",
+      "answer": "Cash reserves at the end of 2024 (Q4 2024) were **$4.6 million** [source: economy_quarterly_financials.csv].\n\nPer the annual report, this gives runway \"well in excess of 24 months\" at current burn — and since Bearn was net cash-flow positive throughout FY2024, runway is essentially a formality rather than a real constraint [source: economy_annual_report_summary.md].",
+      "tools_used": [
+        "query_financials",
+        "search_knowledge_base"
+      ],
+      "expected_tools": null,
+      "sources": [
+        "economy_annual_report_summary.md",
+        "economy_quarterly_financials.csv"
+      ],
+      "latency_s": 5.836732600000687,
+      "agent_cost_usd": 0.0122494,
+      "checks": {
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "economy_quarterly_financials.csv",
+        "economy_annual_report_summary.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Both the $4.6M figure and runway commentary match the tool results and reference, with proper citations."
+      },
+      "total_cost_usd": 0.0257244
+    },
+    {
+      "id": "turns-revenue-followup",
+      "category": "multi-turn",
+      "question": "What was revenue in Q1 2025? → And in Q2 2025?",
+      "answer": "Revenue in Q2 2025 was **$1,865,000** [source: economy_quarterly_financials.csv].",
+      "tools_used": [
+        "query_financials"
+      ],
+      "expected_tools": [
+        "query_financials"
+      ],
+      "sources": [
+        "economy_quarterly_financials.csv"
+      ],
+      "latency_s": 3.7191724000003887,
+      "agent_cost_usd": 0.0109682,
+      "checks": {
+        "tools": true,
+        "number": true,
+        "cites_expected_source": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "economy_quarterly_financials.csv"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "The answer matches the tool result and reference exactly, with proper citation."
+      },
+      "total_cost_usd": 0.0205882
+    },
+    {
+      "id": "turns-hotel-followup",
+      "category": "multi-turn",
+      "question": "What's the hotel cap in standard cities? → And in high-cost cities?",
+      "answer": "The hotel cap in high-cost cities (e.g., New York, San Francisco, London, Tokyo) is **$400/night**. [source: finance_expense_policy.md]",
+      "tools_used": [],
+      "expected_tools": null,
+      "sources": [
+        "finance_expense_policy.md"
+      ],
+      "latency_s": 2.0988317000010284,
+      "agent_cost_usd": 0.0100054,
+      "checks": {
+        "answer_contains": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "finance_expense_policy.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "The $400/night cap and listed cities match the tool results and reference exactly, with proper citation."
+      },
+      "total_cost_usd": 0.021550399999999997
+    },
+    {
+      "id": "turns-pto-rollover",
+      "category": "multi-turn",
+      "question": "How many PTO days do new employees get? → How many of those can I roll over into next year?",
+      "answer": "You can roll over up to **5 unused PTO days** into the next calendar year; anything beyond that is forfeited on Dec 31 (unless state law requires payout) [source: hr_policies_pto.md].",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": null,
+      "sources": [
+        "hr_policies_pto.md"
+      ],
+      "latency_s": 3.50720690000162,
+      "agent_cost_usd": 0.0082343,
+      "checks": {
+        "number": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "hr_policies_pto.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Answer matches the retrieved policy chunk exactly and fully addresses the rollover question with proper citation."
+      },
+      "total_cost_usd": 0.0238593
+    },
+    {
+      "id": "turns-starter-annual",
+      "category": "multi-turn",
+      "question": "What does the Starter plan cost? → What would that come to per year with the annual discount?",
+      "answer": "With the 20% annual discount, the Starter plan comes to **$470.40/year** (vs. $588/year paying monthly). [source: product_faq_billing.md]",
+      "tools_used": [
+        "calculator"
+      ],
+      "expected_tools": [
+        "calculator"
+      ],
+      "sources": [
+        "finance_expense_policy.md",
+        "hr_policies_benefits.md",
+        "product_faq_billing.md"
+      ],
+      "latency_s": 4.759750599987456,
+      "agent_cost_usd": 0.0148194,
+      "checks": {
+        "tools": true,
+        "number": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "product_faq_billing.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "The answer matches the calculator result and knowledge base pricing, correctly giving $470.40/year vs $588 monthly, with proper citation."
+      },
+      "total_cost_usd": 0.0307294
+    },
+    {
+      "id": "turns-vpn-tools",
+      "category": "multi-turn",
+      "question": "Which VPN does Bearn use? → Which internal tools do I need it for?",
+      "answer": "You need Tailscale VPN to reach these internal tools:\n\n- **Confluence** (internal wiki)\n- **Jira** (issue tracking)\n- **Internal staging and QA environments**\n- **Internal admin dashboards** for the Bearn platform\n\nNote: Production customer-facing services are public-facing and don't require VPN access. [source: it_setup_vpn_access.md]",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": null,
+      "sources": [
+        "it_setup_laptop.md",
+        "it_setup_vpn_access.md"
+      ],
+      "latency_s": 5.127697100004298,
+      "agent_cost_usd": 0.0144235,
+      "checks": {
+        "answer_contains": true
+      },
+      "passed": true,
+      "refused": false,
+      "cited": [
+        "it_setup_vpn_access.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "The list matches the tool results exactly and is properly cited, fully answering the question."
+      },
+      "total_cost_usd": 0.030553499999999997
+    },
+    {
+      "id": "oos-ceo-salary",
+      "category": "out-of-scope",
+      "question": "What is the CEO's salary?",
+      "answer": "That information isn't something I have access to — the knowledge base covers HR policies, IT, security, remote work, product details, expenses/travel, and quarterly financials, not individual employee compensation. I can help with things like Bearn's benefits, PTO, or financial metrics if that's useful.",
+      "tools_used": [],
+      "expected_tools": null,
+      "sources": [],
+      "latency_s": 2.8089646000007633,
+      "agent_cost_usd": 0.006414,
+      "checks": {
+        "refusal": true
+      },
+      "passed": true,
+      "refused": true,
+      "cited": [],
+      "citation_precision": null,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 4,
+        "correctness": 4,
+        "rationale": "The answer correctly states the info isn't available and describes its coverage areas (supported by instructions), though it made the claim without calling any search tool and gave no citation."
+      },
+      "total_cost_usd": 0.015529000000000001
+    },
+    {
+      "id": "oos-stock-price",
+      "category": "out-of-scope",
+      "question": "What's Bearn's stock price today?",
+      "answer": "Bearn Analytics is a private company (per the annual report context I have access to), and I don't have any tool for tracking a public \"stock price\" — that data isn't in the knowledge base. I can help instead with things like company funding history, financials (revenue, ARR, cash reserves, etc.), or HR/IT policies. Let me know if you'd like any of that.",
+      "tools_used": [],
+      "expected_tools": null,
+      "sources": [],
+      "latency_s": 2.6128213000047253,
+      "agent_cost_usd": 0.006639,
+      "checks": {
+        "refusal": true
+      },
+      "passed": true,
+      "refused": true,
+      "cited": [],
+      "citation_precision": null,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 3,
+        "correctness": 4,
+        "rationale": "The refusal and capability description are fine, but the claim that Bearn is private cites annual report context without any tool call to support it."
+      },
+      "total_cost_usd": 0.015649
+    },
+    {
+      "id": "oos-sick-days",
+      "category": "out-of-scope",
+      "question": "How many sick days do employees get?",
+      "answer": "I don't see a separate, dedicated \"sick day\" allotment in the knowledge base — Bearn's policy uses a unified PTO system rather than distinct sick leave. PTO accrues based on tenure:\n\n- Years 1–3: 15 days/year\n- After 3 years: 20 days/year\n- After 7 years: 25 days/year\n\n[source: hr_policies_pto.md]\n\nIf your question is about a separate sick-leave benefit outside PTO, that isn't covered in the documents I have access to.",
+      "tools_used": [
+        "search_knowledge_base",
+        "search_knowledge_base"
+      ],
+      "expected_tools": null,
+      "sources": [
+        "hr_policies_benefits.md",
+        "hr_policies_pto.md"
+      ],
+      "latency_s": 5.983201800001552,
+      "agent_cost_usd": 0.0128554,
+      "checks": {
+        "refusal": true
+      },
+      "passed": true,
+      "refused": true,
+      "cited": [
+        "hr_policies_pto.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 4,
+        "correctness": 5,
+        "rationale": "Correctly states no separate sick-day policy exists and cites accurate PTO accrual figures; the claim that PTO is a unified system covering sick leave is a mild inference beyond the retrieved text."
+      },
+      "total_cost_usd": 0.0304004
+    },
+    {
+      "id": "oos-q3-2025",
+      "category": "out-of-scope",
+      "question": "What was revenue in Q3 2025?",
+      "answer": "I don't have data for Q3 2025 — our financials currently only cover through Q2 2025 (most recent: Q2 2025 revenue was $1,865,000). Q3 2025 figures aren't available yet.",
+      "tools_used": [
+        "query_financials"
+      ],
+      "expected_tools": null,
+      "sources": [
+        "economy_quarterly_financials.csv"
+      ],
+      "latency_s": 4.268714300007559,
+      "agent_cost_usd": 0.008957,
+      "checks": {
+        "refusal": true
+      },
+      "passed": true,
+      "refused": true,
+      "cited": [],
+      "citation_precision": null,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Correctly states Q3 2025 is unavailable and cites Q2 2025 revenue matching tool output, though without an explicit source tag."
+      },
+      "total_cost_usd": 0.019422000000000002
+    },
+    {
+      "id": "oos-pet-insurance",
+      "category": "out-of-scope",
+      "question": "Does Bearn offer pet insurance?",
+      "answer": "No, Bearn's benefits documentation doesn't mention pet insurance. Current benefits include medical (Bronze/Silver/Gold tiers), dental, vision, life/disability insurance, a $300 annual wellness stipend, and an Employee Assistance Program [source: hr_policies_benefits.md].",
+      "tools_used": [
+        "search_knowledge_base"
+      ],
+      "expected_tools": null,
+      "sources": [
+        "finance_expense_policy.md",
+        "hr_policies_benefits.md"
+      ],
+      "latency_s": 4.122190200010664,
+      "agent_cost_usd": 0.0092622,
+      "checks": {
+        "refusal": true
+      },
+      "passed": true,
+      "refused": true,
+      "cited": [
+        "hr_policies_benefits.md"
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "The answer correctly states pet insurance isn't in the knowledge base and lists benefits accurately supported by the retrieved chunks."
+      },
+      "total_cost_usd": 0.0214822
+    },
+    {
+      "id": "oos-poem",
+      "category": "out-of-scope",
+      "question": "Write me a poem about the ocean.",
+      "answer": "I'm the Bearn Agent, focused on helping with Bearn Analytics topics — HR policies, IT/security setup, product/billing questions, expense/travel policy, financial metrics, and questions about how I work. I can't write general creative content like an ocean poem. Let me know if you'd like help with any Bearn-related question instead!",
+      "tools_used": [],
+      "expected_tools": [],
+      "sources": [],
+      "latency_s": 2.909555000005639,
+      "agent_cost_usd": 0.006589,
+      "checks": {
+        "tools": true,
+        "refusal": true
+      },
+      "passed": true,
+      "refused": true,
+      "cited": [],
+      "citation_precision": null,
+      "citation_recall": null,
+      "judge": {
+        "faithfulness": 5,
+        "correctness": 5,
+        "rationale": "Polite refusal with self-description consistent with its instructions, matching the reference."
+      },
+      "total_cost_usd": 0.015224000000000001
+    }
+  ],
+  "rescored_at": "2026-09-24 15:10 UTC"
+}
