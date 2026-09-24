@@ -63,10 +63,9 @@ Claude is called directly through the `anthropic` Python SDK ([`src/ragbot/llm.p
 
 The public version runs on Streamlit Community Cloud using my own API key, so visitors don't need one. To keep costs predictable, it has a few limits:
 
-- 15 questions per browser session, and questions are capped at 500 characters;
-- a shared daily budget (by default $2), tracked from the costs the trace already computes; after that the demo pauses until the next day;
+- 7 questions per browser session, and questions are capped at 500 characters;
+- a shared daily usage limit;
 - a maximum number of model calls per question;
-- a monthly spend limit on the API key itself, set in the Anthropic Console, as the final backstop.
 
 The Evaluation tab in the app only reads results that are committed to the repo. Visiting it never calls the API, so nobody can trigger an expensive evaluation run from the demo.
 
@@ -89,11 +88,11 @@ Each test question records what a correct response looks like, using whichever o
 - a number it must include, within a tolerance;
 - whether it should decline.
 
-A question passes only if every check that applies to it passes. On top of these checks, a second model (`claude-opus-5`) acts as a judge. It reads the question, the tool results the agent actually received and a short reference answer, then scores the response from 1 to 5 for faithfulness (is every claim backed by the tool results?) and correctness.
+A question passes only if every check that applies to it passes. On top of these checks, LLM-as-judge is also applied, by using a second model (`claude-opus-5`) to judge the test answers. It reads the question, the tool results the agent actually received and a short reference answer, then scores the response from 1 to 5 for faithfulness (is every claim backed by the tool results?) and correctness.
 
 Retrieval is also measured on its own, without any model calls: for each question, does the right document appear in the top k search results (hit@k and recall@k), and how high does it rank (MRR)?
 
-Results from the latest run (2026-09-24, 56 questions, $1.15 to run):
+Results from the latest run (2026-09-24):
 
 | | |
 |---|---|
@@ -110,16 +109,16 @@ The full breakdown is in [`evals/results/REPORT.md`](evals/results/REPORT.md) an
 
 A perfect pass rate on a test set I wrote myself shouldn't be read as "the agent is perfect". The set is small, and the check that detects a polite refusal is a pattern match that I widened during development after seeing correct declines it didn't recognise. The judge scores are the more interesting signal. Every point it docked was for a claim that went beyond what the tools had returned. For example, the agent said the company is privately held while declining a stock-price question, without having looked anything up. This is exactly the behaviour the prompt tries to prevent, and it's the next thing to tighten.
 
-To run the evaluation yourself:
+To run the evaluation locally:
 
 ```bash
-# Retrieval metrics only: free, no API key (CI runs this and fails below 90% hit@4)
+# Retrieval metrics only
 python scripts/run_eval.py --retrieval-only --min-hit-at-4 0.9
 
-# Full run with the judge: about $1-2, writes evals/results/latest.json and REPORT.md
+# Full run with the judge: writes evals/results/latest.json and REPORT.md
 python scripts/run_eval.py --judge
 
-# Compare another agent model, with a hard spending cap
+# Compare another agent model with a credit spending cap
 python scripts/run_eval.py --judge --compare-models claude-haiku-4-5 --max-cost 5
 
 # Try a few questions without overwriting the saved results
@@ -129,42 +128,6 @@ python scripts/run_eval.py --only fin-profit-growth oos-ceo-salary
 python scripts/run_eval.py --rescore
 ```
 
-## Running it locally
-
-You'll need Python 3.10+ and an Anthropic API key.
-
-```bash
-git clone https://github.com/Bearn9/rag-demo.git
-cd rag-demo
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-cp .env.example .env             # Windows: Copy-Item .env.example .env
-# add your ANTHROPIC_API_KEY to .env
-streamlit run app.py
-```
-
-On Windows, if PowerShell refuses to run `Activate.ps1`, run `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` once. `faiss-cpu` needs 64-bit Python.
-
-The search index is already built. If you change anything in `data/knowledge_base/`, rebuild it with `python -m ragbot.ingest`.
-
-## Deploying your own copy
-
-1. Fork the repo and create a new app at [share.streamlit.io](https://share.streamlit.io), pointing it at `app.py` on `main`.
-2. Under Advanced settings, pick Python 3.11 and add your key as a secret: `ANTHROPIC_API_KEY = "sk-ant-..."`. Streamlit exposes top-level secrets as environment variables, so no code changes are needed. The other settings in `.env.example` can be added the same way.
-3. Set a monthly spend limit for the key in the Anthropic Console.
-
-`requirements.txt` installs the CPU-only build of PyTorch, which keeps the deployment small. Free Streamlit apps go to sleep when unused, so the first visit after a while can take half a minute.
-
-## Tests
-
-```bash
-pip install -r requirements-dev.txt
-pytest tests/test_tools.py tests/test_evaluation.py tests/test_retriever.py   # no API key needed
-pytest tests/test_graph.py                                                    # runs the real agent; needs a key
-```
-
-The first set covers the tools (including attempts to sneak code into the calculator), the evaluation metrics and retrieval. `test_graph.py` runs a sample of the evaluation questions through the real agent and is skipped when no key is set. GitHub Actions rebuilds the index, runs the retrieval check and runs the tests on every push.
 
 ## Configuration
 
@@ -180,26 +143,6 @@ Everything is set through environment variables (see `.env.example`):
 | `MAX_QUESTIONS_PER_SESSION` | `15` | demo limit per visitor |
 | `DAILY_BUDGET_USD` | `2.0` | demo spending limit per day |
 
-## Project layout
-
-```
-app.py                  Streamlit app: chat with trace, evaluation results, how it works
-src/ragbot/
-  graph.py              the agent loop
-  tools.py              the four tools
-  llm.py                calls to Claude (agent step and eval judge)
-  prompts.py            system prompts
-  retriever.py          search over the FAISS index
-  ingest.py             builds the index from data/knowledge_base/
-  evaluation.py         evaluation metrics
-  config.py             settings, prices, limits
-data/knowledge_base/    the 11 fictional company documents
-docs/harness.md         how the assistant works (read by explain_harness)
-vector_store/           the prebuilt search index
-evals/                  test questions and the latest results
-scripts/run_eval.py     runs the evaluation
-tests/
-```
 
 ## License
 

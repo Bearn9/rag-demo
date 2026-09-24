@@ -23,12 +23,9 @@ REPO_URL = "https://github.com/Bearn9/rag-demo"
 st.set_page_config(page_title="Bearn Agent Demo", page_icon="\N{COMPASS}", layout="wide")
 
 SUGGESTIONS = [
-    ("Policy lookup", "How many PTO days do new employees get?"),
-    ("Finance maths", "How much did net profit grow from Q1 to Q2 2025, in percent?"),
-    ("Search + calculator", "What's 15% of the hotel spend cap in high-cost cities?"),
-    ("Multi-document", "How does the home-office stipend compare to the wellness stipend?"),
-    ("About the agent", "How do you decide which tool to use?"),
-    ("Out of scope", "What is the CEO's salary?"),
+     ("Multi-document lookup", "How does the home-office stipend compare to the wellness stipend?"),
+     ("Finance math", "How much did net profit grow from Q1 to Q2 2025, in percent?"),
+     ("Multilingual", "Forstår du dansk?"),
 ]
 
 TOOL_ICONS = {
@@ -160,12 +157,14 @@ if "messages" not in st.session_state:
 
 with st.sidebar:
     st.markdown("### Bearn Agent Demo")
-    st.caption("Claude tool use · LangGraph · FAISS · Streamlit")
+    st.caption("Claude API - LangGraph - FAISS")
     st.markdown(
-        "An agentic RAG assistant for **Bearn Analytics**, a fictional company. For each "
-        "question, Claude decides which tools to call: knowledge-base search, exact "
-        "financial queries, a calculator, or a lookup of its own design docs. Then it "
-        "writes a cited answer. The trace under each answer shows every step."
+        "An agentic RAG Demo, using made up documents from a fictional company Bearn Analytics for retrieval. "
+        "For each question, a Claude model decides how to process the query, "
+        "whether tool-calling such as document lookup using vector search is relevant. "
+        "The agent then generates an answer with the cited references. " 
+        "The trace under each answer shows every step and the cost of the query. "
+        "More information is available on the GitHub repo"
     )
     show_trace = st.toggle("Show agent trace", value=True)
     # Filled in at the end of the script, after any question in this run has been counted.
@@ -290,9 +289,8 @@ def _load_eval_results() -> dict | None:
 with eval_tab:
     results = _load_eval_results()
     st.markdown(
-        "The project owner runs the evaluation offline with `python scripts/run_eval.py --judge` "
-        "over a labelled dataset of questions. This tab only displays the committed results, so "
-        "visiting it never triggers API calls."
+        "The evaluation is run locally before comitting the results to GitHub. This uses LLM-as-judge and deterministic metrics "
+        "over a labelled dataset of questions. This tab displays the last comitted results."
     )
     if results is None:
         st.info("No evaluation results have been committed yet. Run `python scripts/run_eval.py --judge` to generate them.")
